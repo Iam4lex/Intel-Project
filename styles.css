@@ -577,6 +577,11 @@ input{
     outline: none;
     font-size: 1.5em;
     color: #fff;
+    transition: 0.5s ease;
+}
+
+.form__container-box input:hover{
+    box-shadow: 0 0 10px 10px #070b29;
 }
 
 ::placeholder{
@@ -609,11 +614,12 @@ input{
     font-size: 2em;
     border: none;
     border-radius: 50px;
+    transition: 0.5s ease;
+
 }
 
 .join-btn:hover{
     color: #ff0000;
-    transition: all 0.4s ease;
     background: #fff;
 }
 
