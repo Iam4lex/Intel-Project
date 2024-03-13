@@ -645,6 +645,7 @@ input{
 .join-btn:hover{
     color: #ff0000;
     background: #fff;
+    text-align: center;
 }
 
 .acc .content{
