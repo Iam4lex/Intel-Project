@@ -396,40 +396,115 @@ html, body{
     position: relative;
 }
 
-.single-about img{
+.single-about .img{
     width: 100%;
     height: 400px;
     border-radius: 10px;
 }
 
-/*  Hover of the images   */
-
-.overlay{
+.single-about img{
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0%;
     border-radius: 10px;
-    cursor: pointer;
-    background: linear-gradient(rgba(17, 15, 15, 0.5),#ff0000);
+    transition: transform 0.3s ease;
+}
+
+.single-about img:hover{
+    width: 110%;
+    transform: scale(1.2);
+}
+
+/*  Hover of the images   */
+/* About Section */
+.title-text h1 {
+    font-size: 4em;
+    text-align: center;
+    background-color: #ff0000;
+    background-image: linear-gradient(to top, #ff0808 0%, hsl(0, 96%, 72%) 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.content_container {
+    color: #c0c0c0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    margin: 10px 8rem;
+    line-height: 1.5;
+}
+
+.sub-head {
+    color: #ffffff;
+    font-size: 25px;
+    text-align: right;
+}
+
+#about {
+    width: 100%;
+    padding: 70px 0;
+    background: #141414;
+}
+
+/* Overlay Styling */
+.overlay {
     opacity: 0;
     transition: all 0.7s;
 }
 
-.single-about:hover .overlay{
-    bottom: 20%;
+.single-about:hover .overlay {
     opacity: 1;
 }
 
-.content h2{
+
+.about-box {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.single-about {
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.single-about .img {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure the overflow is hidden to contain the zoom effect */
+}
+
+.single-about .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.single-about .img:hover img {
+    transform: scale(1.2);
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.content h2 {
     position: absolute;
     top: 40%;
     left: 50%;
     font-size: 2em;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-hr{
+hr {
     position: absolute;
     color: #fff;
     width: 50%;
@@ -439,14 +514,14 @@ hr{
     height: 2px;
 }
 
-.content p{
+.content p {
     position: absolute;
     top: 60%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-.founder-photo{
+.founder-photo {
     width: 150px;
     display: flex;
     justify-content: center;
@@ -454,22 +529,29 @@ hr{
     margin: 50px auto;
 }
 
-.founder-content{
+.founder-content {
     color: #ffffff;
     position: absolute;
     text-align: center;
     margin-top: 200px;
 }
 
-.main__content .f-content{
+.main__content .f-content {
     font-size: 16px;
     color: #c0c0c0;
     text-align: justify;
 }
-.founder-photo img{
+
+.founder-photo img {
     width: 150px;
     border-radius: 50%;
+    transition: transform 0.3s ease;
 }
+
+.founder-photo img:hover {
+    transform: scale(1.2);
+}
+
 
 /* Mobile Responsive */
 
@@ -477,10 +559,19 @@ hr{
     .single-about{
         flex-basis: 100%;
         margin-bottom: 30px;
+        padding: 0;
     }
     .title-text h1{
         font-size: 35px;
         margin-top: 4em;
+    }
+    .content_container{
+        margin: 0 50px;
+        margin-bottom: 10px;
+    }
+    .main__container .main__content .f-content{
+        padding: 0;
+        margin: 0 -20px;
     }
 }
 
@@ -688,5 +779,7 @@ input{
     border-radius: 50px;
     margin-top: 1em;
 }
+
+
 
 
